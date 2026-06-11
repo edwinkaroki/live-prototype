@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-forestGreen text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-gold text-forestGreen rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-forestGreen text-forestGreen rounded-lg font-semibold hover:bg-forestGreen hover:text-white transition-all duration-300;
+  }
+
+  .glass {
+    @apply bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-darkSlate outline-none transition focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-30;
+  }
+
+  .textarea {
+    @apply w-full resize-y rounded-lg border border-slate-300 bg-white px-4 py-3 text-darkSlate outline-none transition focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-30;
+  }
+
+  .field-label {
+    @apply block text-sm font-bold text-darkSlate;
+  }
+
+  .field-hint {
+    @apply mt-2 block text-xs leading-5 text-darkSlate text-opacity-60;
+  }
+}
