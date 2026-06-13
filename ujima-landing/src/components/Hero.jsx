@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Hero() {
+  const navigate = useNavigate()
+
   const floatingCards = [
     { text: '✓ Loan Approved', delay: 0, icon: '📋' },
     { text: '✓ AI Analysis Complete', delay: 0.3, icon: '🤖' },
@@ -60,8 +63,9 @@ export default function Hero() {
                 whileHover={{ scale: 1.05, x: 10 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary flex items-center justify-center gap-2 group"
-                onClick={() => (window.location.href = '/apply')}
+                onClick={() => navigate('/apply')}
               >
+
                 Apply for a Loan
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </motion.button>

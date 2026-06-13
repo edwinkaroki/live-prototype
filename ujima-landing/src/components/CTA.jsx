@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, DollarSign, TrendingUp, Shield } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 export default function CTA() {
+  const navigate = useNavigate()
+
   const floatingIcons = [
     { icon: DollarSign, top: '10%', left: '5%', delay: 0 },
     { icon: TrendingUp, top: '60%', left: '10%', delay: 1 },
@@ -72,8 +75,9 @@ export default function CTA() {
               whileHover={{ scale: 1.05, x: 10 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-gold text-forestGreen rounded-xl font-bold text-lg flex items-center gap-3 group hover:shadow-2xl transition-all"
-              onClick={() => (window.location.href = '/apply')}
+              onClick={() => navigate('/apply')}
             >
+
               Start Loan Application
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={24} />
             </motion.button>
