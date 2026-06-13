@@ -59,7 +59,7 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed z-50 w-full bg-white bg-opacity-95 shadow-lg backdrop-blur-md"
+      className="fixed left-0 top-0 z-50 w-full bg-white/95 shadow-lg backdrop-blur-md"
     >
       <div className="section-container">
         <div className="flex h-20 items-center justify-between">

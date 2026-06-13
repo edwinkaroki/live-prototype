@@ -12,7 +12,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-forestGreen via-forestGreen to-darkSlate pt-20 overflow-hidden relative">
+    <section className="min-h-screen bg-gradient-to-br from-forestGreen via-forestGreen to-darkSlate pt-24 sm:pt-20 overflow-hidden relative">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -39,7 +39,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-5 sm:mb-6 leading-tight"
             >
               Access Fair Loans <span className="text-gold">Without Leaving</span> Anyone Behind
             </motion.h1>
@@ -48,10 +48,25 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl text-cream mb-8 leading-relaxed"
+              className="text-base sm:text-xl text-cream mb-6 sm:mb-8 leading-relaxed"
             >
               Ujima Loan Pride uses intelligent AI agents to help SACCOs assess loan applications fairly for farmers, market vendors, and small business owners across Kenya.
             </motion.p>
+
+            {/* Mobile-friendly cards: stack under the text */}
+            <div className="mt-6 flex flex-col gap-3 md:hidden">
+              {floatingCards.map((card, index) => (
+                <div
+                  key={index}
+                  className="glass rounded-xl p-4 text-white backdrop-blur-xl"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{card.icon}</span>
+                    <span className="text-sm font-semibold">{card.text}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -81,8 +96,8 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right - Floating Cards */}
-          <div className="relative h-full flex items-center justify-center">
+          {/* Right - Floating Cards (hidden on mobile) */}
+          <div className="relative hidden h-full items-center justify-center md:flex">
             {floatingCards.map((card, index) => (
               <motion.div
                 key={index}

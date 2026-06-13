@@ -1,8 +1,7 @@
-# TODO - Fix dependency conflict (langchain/langsmith)
-
-- [ ] Inspect current requirements.txt (done)
-- [ ] Propose compatible version ranges for langchain / langchain-community / langsmith to remove ResolutionImpossible
-- [ ] Update ujima-loan-pride/requirements.txt accordingly
-- [ ] Re-run pip install -r requirements.txt in a clean venv to verify
-- [ ] If still failing, pin langsmith explicitly to a version that satisfies all constraints
+# TODO
+- [ ] Make Navbar sticky with consistent positioning and mobile-safe sizing
+- [ ] Refactor Hero layout so floating cards don’t overlap on mobile (stack/relative layout on small screens)
+- [ ] Adjust Hero typography (smaller H1/spacing on mobile)
+- [ ] Ensure hero/sections are offset correctly so content isn’t hidden under sticky header
+- [ ] Run frontend build/dev check for layout issues
 
